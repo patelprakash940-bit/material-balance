@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Material Counting System</title>
+<title>Material Balance System</title>
 
 <style>
 
@@ -35,34 +35,21 @@ body{
     color:var(--text);
 }
 
-/* =========================
-HEADER
-========================= */
-
 header{
     background:linear-gradient(
         135deg,
         var(--primary),
         var(--primary2)
     );
-
     color:#fff;
     padding:20px 5%;
-
     display:flex;
     justify-content:space-between;
     align-items:center;
-
-    box-shadow:
-        0 4px 18px rgba(15,23,42,.12);
-
+    box-shadow:0 4px 18px rgba(15,23,42,.12);
     font-size:26px;
     font-weight:700;
 }
-
-/* =========================
-CONTAINER
-========================= */
 
 .container{
     width:94%;
@@ -70,18 +57,13 @@ CONTAINER
     margin:24px auto;
 }
 
-/* =========================
-FORM
-========================= */
-
 .form-box{
     background:#fff;
     padding:18px;
     border-radius:14px;
     margin:0 0 22px 0;
     border:1px solid var(--border);
-    box-shadow:
-        0 4px 14px rgba(15,23,42,.05);
+    box-shadow:0 4px 14px rgba(15,23,42,.05);
 }
 
 .form-title{
@@ -93,8 +75,7 @@ FORM
 
 .form-grid{
     display:grid;
-    grid-template-columns:
-        repeat(7,1fr);
+    grid-template-columns:repeat(7,1fr);
     gap:10px;
 }
 
@@ -111,8 +92,7 @@ select{
 input:focus,
 select:focus{
     border-color:#5b9bd5;
-    box-shadow:
-        0 0 0 3px rgba(37,99,235,.10);
+    box-shadow:0 0 0 3px rgba(37,99,235,.10);
 }
 
 #issueMessage{
@@ -125,10 +105,6 @@ select:focus{
 .issue-info{
     color:#166534;
 }
-
-/* =========================
-SECTION TITLE
-========================= */
 
 .section-title{
     display:flex;
@@ -146,14 +122,9 @@ SECTION TITLE
     color:var(--muted);
 }
 
-/* =========================
-SUMMARY
-========================= */
-
 #materialSummary{
     display:grid;
-    grid-template-columns:
-        repeat(auto-fit,minmax(190px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
     gap:12px;
     margin-bottom:22px;
 }
@@ -163,15 +134,13 @@ SUMMARY
     padding:15px;
     border-radius:12px;
     border:1px solid var(--border);
-    box-shadow:
-        0 3px 10px rgba(15,23,42,.04);
+    box-shadow:0 3px 10px rgba(15,23,42,.04);
     transition:.2s;
 }
 
 .summary-card:hover{
     transform:translateY(-2px);
-    box-shadow:
-        0 5px 15px rgba(15,23,42,.08);
+    box-shadow:0 5px 15px rgba(15,23,42,.08);
 }
 
 .summary-title{
@@ -191,10 +160,6 @@ SUMMARY
     margin-top:8px;
 }
 
-/* =========================
-TOP BAR
-========================= */
-
 .top-bar{
     display:flex;
     flex-wrap:wrap;
@@ -204,18 +169,13 @@ TOP BAR
     margin-bottom:12px;
 }
 
-/* =========================
-FILTERS
-========================= */
-
 #btnContainer{
     justify-content:flex-start;
     background:#fff;
     padding:10px;
     border:1px solid var(--border);
     border-radius:12px;
-    box-shadow:
-        0 3px 10px rgba(15,23,42,.04);
+    box-shadow:0 3px 10px rgba(15,23,42,.04);
     overflow-x:auto;
 }
 
@@ -265,10 +225,6 @@ button:hover{
     color:#fff;
 }
 
-/* =========================
-SEARCH
-========================= */
-
 .search-box{
     display:flex;
     gap:8px;
@@ -283,18 +239,13 @@ SEARCH
     outline:none;
 }
 
-/* =================================================
-PO SEARCH SUMMARY
-================================================= */
-
 .po-search-box{
     background:#fff;
     padding:18px;
     border-radius:14px;
     margin:15px 0 20px 0;
     border:1px solid var(--border);
-    box-shadow:
-        0 4px 14px rgba(15,23,42,.05);
+    box-shadow:0 4px 14px rgba(15,23,42,.05);
 }
 
 .po-search-header{
@@ -331,12 +282,6 @@ PO SEARCH SUMMARY
     outline:none;
 }
 
-.po-search-controls input:focus{
-    border-color:#5b9bd5;
-    box-shadow:
-        0 0 0 3px rgba(37,99,235,.10);
-}
-
 .po-search-btn{
     background:var(--primary2);
     color:#fff;
@@ -346,10 +291,6 @@ PO SEARCH SUMMARY
     background:#64748b;
     color:#fff;
 }
-
-/* =========================
-PO RESULT HEADER
-========================= */
 
 .po-result-info{
     display:flex;
@@ -373,10 +314,6 @@ PO RESULT HEADER
     font-weight:700;
     color:var(--primary);
 }
-
-/* =========================
-PO SUMMARY TABLE
-========================= */
 
 .po-summary-container{
     overflow-x:auto;
@@ -421,12 +358,12 @@ PO SUMMARY TABLE
     font-weight:700;
 }
 
-.po-summary-table .balance-positive{
+.balance-positive{
     color:var(--success);
     font-weight:700;
 }
 
-.po-summary-table .balance-negative{
+.balance-negative{
     color:var(--danger);
     font-weight:700;
 }
@@ -442,17 +379,12 @@ PO SUMMARY TABLE
     font-weight:600;
 }
 
-/* =========================
-MAIN TABLE
-========================= */
-
 .table-container{
     overflow-x:auto;
     background:#fff;
     border:1px solid var(--border);
     border-radius:14px;
-    box-shadow:
-        0 4px 14px rgba(15,23,42,.05);
+    box-shadow:0 4px 14px rgba(15,23,42,.05);
 }
 
 table{
@@ -489,9 +421,13 @@ tr:hover{
     font-weight:700;
 }
 
-/* =========================
-FOOTER
-========================= */
+.firebase-status{
+    font-size:12px;
+    padding:6px 10px;
+    border-radius:20px;
+    background:#dcfce7;
+    color:#166534;
+}
 
 footer{
     text-align:center;
@@ -502,15 +438,10 @@ footer{
     font-size:12px;
 }
 
-/* =========================
-RESPONSIVE
-========================= */
-
 @media(max-width:1100px){
 
     .form-grid{
-        grid-template-columns:
-            repeat(4,1fr);
+        grid-template-columns:repeat(4,1fr);
     }
 
 }
@@ -520,6 +451,7 @@ RESPONSIVE
     header{
         align-items:flex-start;
         flex-direction:column;
+        gap:8px;
         font-size:22px;
     }
 
@@ -574,15 +506,23 @@ RESPONSIVE
 <body>
 
 <header>
-    Material Counting System
+
+    <div>
+        Material Balance System
+    </div>
+
+    <div class="firebase-status">
+        ● Firebase Connected
+    </div>
+
 </header>
+
 
 <div class="container">
 
 
 <!-- =================================================
 MATERIAL TRANSACTION ENTRY
-MOVED TO TOP
 ================================================= -->
 
 <div class="form-box">
@@ -598,6 +538,7 @@ MOVED TO TOP
             onchange="checkExistingIssueQty()">
         </select>
 
+
         <select id="lineNumber">
 
             <option value="Line 01">
@@ -610,31 +551,37 @@ MOVED TO TOP
 
         </select>
 
+
         <input
             type="text"
             id="poNumber"
             placeholder="PO Number"
             oninput="checkExistingIssueQty()">
 
+
         <input
             type="text"
             id="productionIncharge"
             placeholder="Production Incharge Name">
+
 
         <input
             type="text"
             id="storeIssueName"
             placeholder="Store Issue Name">
 
+
         <input
             type="number"
             id="issueQty"
             placeholder="Issue Qty">
 
+
         <input
             type="number"
             id="receivedQty"
             placeholder="Received Qty">
+
 
         <button
             class="add-btn"
@@ -643,6 +590,7 @@ MOVED TO TOP
             Add Entry
 
         </button>
+
 
         <div id="issueMessage"></div>
 
@@ -666,6 +614,7 @@ MATERIAL SUMMARY
     </span>
 
 </div>
+
 
 <div id="materialSummary"></div>
 
@@ -695,6 +644,7 @@ SEARCH + EXPORT
             onkeyup="searchMaterial()">
 
     </div>
+
 
     <button
         class="export-btn"
@@ -734,6 +684,7 @@ PO SEARCH
             placeholder="Enter PO Number..."
             onkeyup="searchPO()">
 
+
         <button
             class="po-search-btn"
             onclick="searchPO()">
@@ -741,6 +692,7 @@ PO SEARCH
             Search PO
 
         </button>
+
 
         <button
             class="po-clear-btn"
@@ -757,12 +709,14 @@ PO SEARCH
         id="poResultArea"
         class="po-no-search">
 
+
         <div class="po-result-info">
 
             <div
                 id="poResultTitle"
                 class="po-result-title">
             </div>
+
 
             <div
                 id="poResultTotal"
@@ -800,6 +754,7 @@ PO SEARCH
 
                 </thead>
 
+
                 <tbody id="poSummaryBody">
                 </tbody>
 
@@ -825,26 +780,38 @@ MAIN TABLE
 <tr>
 
     <th>Material</th>
+
     <th>Line</th>
+
     <th>PO</th>
+
     <th>Production Incharge</th>
+
     <th>Store Issue Name</th>
+
     <th>UOM</th>
+
     <th>Date</th>
+
     <th>Issue</th>
+
     <th>Received</th>
+
     <th>Balance</th>
+
     <th>Action</th>
 
 </tr>
 
 </thead>
 
+
 <tbody></tbody>
 
 </table>
 
 </div>
+
 
 </div>
 
@@ -854,18 +821,88 @@ MAIN TABLE
 </footer>
 
 
-<script>
+<!-- =================================================
+FIREBASE + JAVASCRIPT
+================================================= -->
 
-/* =========================
+<script type="module">
+
+import {
+    initializeApp
+} from
+"https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+
+
+import {
+    getFirestore,
+    collection,
+    addDoc,
+    updateDoc,
+    deleteDoc,
+    doc,
+    onSnapshot,
+    query,
+    orderBy
+} from
+"https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+
+
+/* =================================================
+FIREBASE CONFIG
+================================================= */
+
+const firebaseConfig = {
+
+    apiKey:
+    "AIzaSyCQa3SvkLqgFdEPwMJgVitJphAdwSguf0A",
+
+    authDomain:
+    "material-balance-f8f66.firebaseapp.com",
+
+    projectId:
+    "material-balance-f8f66",
+
+    storageBucket:
+    "material-balance-f8f66.firebasestorage.app",
+
+    messagingSenderId:
+    "64746725596",
+
+    appId:
+    "1:64746725596:web:c23bee31df22eb5b2fd419",
+
+    measurementId:
+    "G-R2R8D42Y3G"
+
+};
+
+
+const app =
+    initializeApp(firebaseConfig);
+
+
+const db =
+    getFirestore(app);
+
+
+const materialCollection =
+    collection(
+        db,
+        "materialTransactions"
+    );
+
+
+/* =================================================
 PASSWORD
-========================= */
+================================================= */
 
-const PASSWORD = "waaree@123";
+const PASSWORD =
+    "waaree@123";
 
 
-/* =========================
+/* =================================================
 MATERIALS
-========================= */
+================================================= */
 
 const materials = [
 
@@ -890,9 +927,9 @@ const materials = [
 ];
 
 
-/* =========================
+/* =================================================
 UOM
-========================= */
+================================================= */
 
 const uom = {
 
@@ -917,87 +954,354 @@ const uom = {
 };
 
 
-/* =========================
+/* =================================================
 PAGE LOAD
-========================= */
+================================================= */
 
-window.onload = function(){
+window.addEventListener(
+    "load",
+    function(){
 
-    let sel =
-        document.getElementById(
-            "materialName"
+        const materialSelect =
+            document.getElementById(
+                "materialName"
+            );
+
+
+        const buttonContainer =
+            document.getElementById(
+                "btnContainer"
+            );
+
+
+        materials.forEach(
+            function(material){
+
+                materialSelect.innerHTML += `
+
+                    <option value="${material}">
+                        ${material}
+                    </option>
+
+                `;
+
+
+                buttonContainer.innerHTML += `
+
+                    <button
+                        class="filter-btn"
+                        onclick="filterTable('${material}',this)">
+
+                        ${material}
+
+                    </button>
+
+                `;
+
+            }
         );
 
-    let btn =
-        document.getElementById(
-            "btnContainer"
-        );
 
+        buttonContainer.innerHTML += `
 
-    materials.forEach(function(m){
-
-        sel.innerHTML += `
-            <option value="${m}">
-                ${m}
-            </option>
-        `;
-
-
-        btn.innerHTML += `
             <button
-                class="filter-btn"
-                onclick="filterTable('${m}',this)">
-                ${m}
+                class="filter-btn active"
+                onclick="filterTable('all',this)">
+
+                Show All
+
             </button>
+
         `;
 
-    });
+
+        loadData();
+
+    }
+);
 
 
-    btn.innerHTML += `
-        <button
-            class="filter-btn active"
-            onclick="filterTable('all',this)">
-            Show All
-        </button>
+/* =================================================
+LOAD FIREBASE DATA
+REAL TIME
+================================================= */
+
+function loadData(){
+
+    const tbody =
+        document.querySelector(
+            "#materialTable tbody"
+        );
+
+
+    const q =
+        query(
+            materialCollection,
+            orderBy(
+                "createdAt",
+                "desc"
+            )
+        );
+
+
+    onSnapshot(
+
+        q,
+
+        function(snapshot){
+
+            tbody.innerHTML = "";
+
+
+            snapshot.forEach(
+                function(item){
+
+                    createTableRow(
+                        item.data(),
+                        item.id
+                    );
+
+                }
+            );
+
+
+            updateSummary();
+
+
+            const po =
+                document.getElementById(
+                    "poSearchInput"
+                ).value.trim();
+
+
+            if(po){
+
+                searchPO();
+
+            }
+
+        },
+
+
+        function(error){
+
+            console.error(error);
+
+
+            alert(
+                "Firebase Error:\n\n" +
+                error.message
+            );
+
+        }
+
+    );
+
+}
+
+
+/* =================================================
+CREATE TABLE ROW
+================================================= */
+
+function createTableRow(
+    data,
+    id
+){
+
+    const tbody =
+        document.querySelector(
+            "#materialTable tbody"
+        );
+
+
+    const row =
+        tbody.insertRow();
+
+
+    row.dataset.id =
+        id;
+
+
+    const issue =
+        Number(
+            data.issueQty
+        ) || 0;
+
+
+    const received =
+        Number(
+            data.receivedQty
+        ) || 0;
+
+
+    const balance =
+        received - issue;
+
+
+    if(balance < 0){
+
+        row.classList.add(
+            "low-stock"
+        );
+
+    }
+
+
+    row.innerHTML = `
+
+        <td>
+            ${escapeHTML(data.material)}
+        </td>
+
+        <td>
+            ${escapeHTML(data.line)}
+        </td>
+
+        <td>
+            ${escapeHTML(data.po)}
+        </td>
+
+        <td>
+            ${escapeHTML(
+                data.productionIncharge
+            )}
+        </td>
+
+        <td>
+            ${escapeHTML(
+                data.storeIssueName
+            )}
+        </td>
+
+        <td>
+            ${escapeHTML(data.uom)}
+        </td>
+
+        <td>
+            ${escapeHTML(data.date)}
+        </td>
+
+        <td>
+            ${issue}
+        </td>
+
+        <td>
+            ${received}
+        </td>
+
+        <td>
+            ${balance}
+        </td>
+
+        <td>
+
+            <button
+                class="edit-btn"
+                onclick="editRow(this)">
+
+                Edit
+
+            </button>
+
+
+            <button
+                class="delete-btn"
+                onclick="deleteRow(this)">
+
+                Delete
+
+            </button>
+
+        </td>
+
     `;
 
-
-    loadData();
-
-    updateSummary();
-
-};
+}
 
 
-/* =========================
-CHECK EXISTING MATERIAL + PO
-========================= */
+/* =================================================
+ESCAPE HTML
+================================================= */
 
-function checkExistingIssueQty(){
+function escapeHTML(value){
 
-    let material =
+    if(
+        value === null ||
+        value === undefined
+    ){
+
+        return "";
+
+    }
+
+
+    return String(value)
+
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+
+        .replace(
+            /</g,
+            "&lt;"
+        )
+
+        .replace(
+            />/g,
+            "&gt;"
+        )
+
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+
+        .replace(
+            /'/g,
+            "&#039;"
+        );
+
+}
+
+
+/* =================================================
+CHECK EXISTING ISSUE
+================================================= */
+
+window.checkExistingIssueQty =
+function(){
+
+    const material =
         document.getElementById(
             "materialName"
         ).value;
 
-    let po =
+
+    const po =
         document.getElementById(
             "poNumber"
-        ).value.trim();
+        ).value
+        .trim();
 
-    let message =
+
+    const message =
         document.getElementById(
             "issueMessage"
         );
 
 
     message.innerText = "";
-    message.className = "";
 
 
-    if(!material || !po){
+    if(
+        !material ||
+        !po
+    ){
+
         return;
+
     }
 
 
@@ -1008,52 +1312,58 @@ function checkExistingIssueQty(){
     .querySelectorAll(
         "#materialTable tbody tr"
     )
-    .forEach(function(row){
+    .forEach(
+        function(row){
 
-        let rowMaterial =
-            row.cells[0]
-            .innerText
-            .trim();
-
-
-        let rowPO =
-            row.cells[2]
-            .innerText
-            .trim();
+            const rowMaterial =
+                row.cells[0]
+                .innerText
+                .trim();
 
 
-        if(
-            rowMaterial === material &&
-            rowPO.toLowerCase() ===
-            po.toLowerCase()
-        ){
+            const rowPO =
+                row.cells[2]
+                .innerText
+                .trim();
 
-            if(!existingRow){
-                existingRow = row;
+
+            if(
+                rowMaterial === material &&
+                rowPO.toLowerCase() ===
+                po.toLowerCase()
+            ){
+
+                if(!existingRow){
+
+                    existingRow =
+                        row;
+
+                }
+
             }
 
         }
-
-    });
+    );
 
 
     if(existingRow){
 
-        let existingIssue =
-            parseFloat(
-                existingRow.cells[7]
+        const existingIssue =
+            Number(
+                existingRow
+                .cells[7]
                 .innerText
             ) || 0;
 
 
         document.getElementById(
             "issueQty"
-        ).value = existingIssue;
+        ).value =
+            existingIssue;
 
 
         message.innerText =
-            "Same Material + PO found. " +
-            "Issue Qty will be applied to all entries.";
+            "Same Material + PO found. Issue Qty will be applied to all entries.";
 
 
         message.className =
@@ -1061,59 +1371,63 @@ function checkExistingIssueQty(){
 
     }
 
-}
+};
 
 
-/* =========================
+/* =================================================
 ADD ENTRY
-========================= */
+================================================= */
 
-function addEntry(){
+window.addEntry =
+async function(){
 
-    let m =
+    const material =
         document.getElementById(
             "materialName"
         ).value;
 
 
-    let line =
+    const line =
         document.getElementById(
             "lineNumber"
         ).value;
 
 
-    let po =
+    const po =
         document.getElementById(
             "poNumber"
-        ).value.trim();
+        ).value
+        .trim();
 
 
-    let productionIncharge =
-        document
-        .getElementById(
+    const productionIncharge =
+        document.getElementById(
             "productionIncharge"
-        )
-        .value.trim();
+        ).value
+        .trim();
 
 
-    let storeIssueName =
-        document
-        .getElementById(
+    const storeIssueName =
+        document.getElementById(
             "storeIssueName"
-        )
-        .value.trim();
+        ).value
+        .trim();
 
 
-    let i =
-        +document.getElementById(
-            "issueQty"
-        ).value || 0;
+    let issueQty =
+        Number(
+            document.getElementById(
+                "issueQty"
+            ).value
+        ) || 0;
 
 
-    let r =
-        +document.getElementById(
-            "receivedQty"
-        ).value || 0;
+    const receivedQty =
+        Number(
+            document.getElementById(
+                "receivedQty"
+            ).value
+        ) || 0;
 
 
     if(!po){
@@ -1149,7 +1463,10 @@ function addEntry(){
     }
 
 
-    if(i <= 0 && r <= 0){
+    if(
+        issueQty <= 0 &&
+        receivedQty <= 0
+    ){
 
         alert(
             "Please enter Issue or Received Quantity"
@@ -1160,8 +1477,6 @@ function addEntry(){
     }
 
 
-    /* SAME MATERIAL + PO */
-
     let existingIssue = null;
 
 
@@ -1169,166 +1484,167 @@ function addEntry(){
     .querySelectorAll(
         "#materialTable tbody tr"
     )
-    .forEach(function(row){
+    .forEach(
+        function(row){
 
-        let rowMaterial =
-            row.cells[0]
-            .innerText
-            .trim();
-
-
-        let rowPO =
-            row.cells[2]
-            .innerText
-            .trim();
+            const rowMaterial =
+                row.cells[0]
+                .innerText
+                .trim();
 
 
-        if(
-            rowMaterial === m &&
-            rowPO.toLowerCase() ===
-            po.toLowerCase()
-        ){
+            const rowPO =
+                row.cells[2]
+                .innerText
+                .trim();
 
-            if(existingIssue === null){
 
-                existingIssue =
-                    +parseFloat(
-                        row.cells[7]
-                        .innerText
-                    ) || 0;
+            if(
+                rowMaterial === material &&
+                rowPO.toLowerCase() ===
+                po.toLowerCase()
+            ){
+
+                if(existingIssue === null){
+
+                    existingIssue =
+                        Number(
+                            row.cells[7]
+                            .innerText
+                        ) || 0;
+
+                }
 
             }
 
         }
-
-    });
+    );
 
 
     if(existingIssue !== null){
 
-        i = existingIssue;
+        issueQty =
+            existingIssue;
 
     }
 
 
-    let balance = r - i;
+    try{
+
+        await addDoc(
+            materialCollection,
+            {
+
+                material:
+                    material,
+
+                line:
+                    line,
+
+                po:
+                    po,
+
+                productionIncharge:
+                    productionIncharge,
+
+                storeIssueName:
+                    storeIssueName,
+
+                uom:
+                    uom[material],
+
+                date:
+                    new Date()
+                    .toLocaleString(),
+
+                issueQty:
+                    issueQty,
+
+                receivedQty:
+                    receivedQty,
+
+                createdAt:
+                    Date.now()
+
+            }
+        );
 
 
-    let row =
-        document
-        .querySelector(
-            "#materialTable tbody"
-        )
-        .insertRow();
+        alert(
+            "Entry saved successfully"
+        );
 
 
-    if(balance < 0){
+        clearEntryForm();
 
-        row.classList.add(
-            "low-stock"
+    }
+    catch(error){
+
+        console.error(error);
+
+
+        alert(
+            "Firebase Save Error:\n\n" +
+            error.message
         );
 
     }
 
-
-    row.innerHTML = `
-
-        <td>${m}</td>
-
-        <td>${line}</td>
-
-        <td>${po}</td>
-
-        <td>${productionIncharge}</td>
-
-        <td>${storeIssueName}</td>
-
-        <td>${uom[m]}</td>
-
-        <td>${new Date().toLocaleString()}</td>
-
-        <td>${i}</td>
-
-        <td>${r}</td>
-
-        <td>${balance}</td>
-
-        <td>
-
-            <button
-                class="edit-btn"
-                onclick="editRow(this)">
-                Edit
-            </button>
-
-            <button
-                class="delete-btn"
-                onclick="deleteRow(this)">
-                Delete
-            </button>
-
-        </td>
-
-    `;
+};
 
 
-    saveData();
-    updateSummary();
+/* =================================================
+CLEAR FORM
+================================================= */
 
-
-    /* CLEAR */
+function clearEntryForm(){
 
     document.getElementById(
         "poNumber"
     ).value = "";
 
+
     document.getElementById(
         "productionIncharge"
     ).value = "";
+
 
     document.getElementById(
         "storeIssueName"
     ).value = "";
 
+
     document.getElementById(
         "issueQty"
     ).value = "";
+
 
     document.getElementById(
         "receivedQty"
     ).value = "";
 
+
     document.getElementById(
         "issueMessage"
     ).innerText = "";
 
-
-    if(
-        document.getElementById(
-            "poSearchInput"
-        ).value.trim()
-    ){
-
-        searchPO();
-
-    }
-
 }
 
 
-/* =========================
-EDIT ENTRY
-========================= */
+/* =================================================
+EDIT
+================================================= */
 
-function editRow(btn){
+window.editRow =
+async function(button){
 
-    let pass =
+    const password =
         prompt(
             "Enter Password"
         );
 
 
-    if(pass !== PASSWORD){
+    if(password !== PASSWORD){
 
         alert(
             "Wrong Password"
@@ -1339,20 +1655,35 @@ function editRow(btn){
     }
 
 
-    let r =
-        btn
+    const row =
+        button
         .parentElement
         .parentElement;
 
 
-    let oldMaterial =
-        r.cells[0]
+    const id =
+        row.dataset.id;
+
+
+    if(!id){
+
+        alert(
+            "Record ID not found"
+        );
+
+        return;
+
+    }
+
+
+    const oldMaterial =
+        row.cells[0]
         .innerText
         .trim();
 
 
-    let oldPO =
-        r.cells[2]
+    const oldPO =
+        row.cells[2]
         .innerText
         .trim();
 
@@ -1365,11 +1696,14 @@ function editRow(btn){
 
 
     if(newPO === null){
+
         return;
+
     }
 
 
-    newPO = newPO.trim();
+    newPO =
+        newPO.trim();
 
 
     if(!newPO){
@@ -1386,16 +1720,19 @@ function editRow(btn){
     let line =
         prompt(
             "Line (Line 01 / Line 02)",
-            r.cells[1].innerText
+            row.cells[1].innerText
         );
 
 
     if(line === null){
+
         return;
+
     }
 
 
-    line = line.trim();
+    line =
+        line.trim();
 
 
     if(
@@ -1415,12 +1752,14 @@ function editRow(btn){
     let productionIncharge =
         prompt(
             "Production Incharge Name",
-            r.cells[3].innerText
+            row.cells[3].innerText
         );
 
 
     if(productionIncharge === null){
+
         return;
+
     }
 
 
@@ -1428,26 +1767,17 @@ function editRow(btn){
         productionIncharge.trim();
 
 
-    if(!productionIncharge){
-
-        alert(
-            "Production Incharge Name cannot be blank"
-        );
-
-        return;
-
-    }
-
-
     let storeIssueName =
         prompt(
             "Store Issue Name",
-            r.cells[4].innerText
+            row.cells[4].innerText
         );
 
 
     if(storeIssueName === null){
+
         return;
+
     }
 
 
@@ -1455,180 +1785,109 @@ function editRow(btn){
         storeIssueName.trim();
 
 
-    if(!storeIssueName){
-
-        alert(
-            "Store Issue Name cannot be blank"
-        );
-
-        return;
-
-    }
-
-
     let newIssueQty =
-        +prompt(
-            "Issue Qty\n\nThis will update ALL entries with same Material + PO.",
-            r.cells[7].innerText
+        Number(
+            prompt(
+                "Issue Qty\n\n" +
+                "This will update ALL entries " +
+                "with same Material + PO.",
+                row.cells[7].innerText
+            )
         );
 
 
     if(isNaN(newIssueQty)){
+
         newIssueQty = 0;
+
     }
 
 
     let receivedQty =
-        +prompt(
-            "Received Qty",
-            r.cells[8].innerText
+        Number(
+            prompt(
+                "Received Qty",
+                row.cells[8].innerText
+            )
         );
 
 
     if(isNaN(receivedQty)){
+
         receivedQty = 0;
+
     }
 
 
-    r.cells[1].innerText =
-        line;
+    try{
 
-    r.cells[2].innerText =
-        newPO;
+        await updateDoc(
 
-    r.cells[3].innerText =
-        productionIncharge;
+            doc(
+                db,
+                "materialTransactions",
+                id
+            ),
 
-    r.cells[4].innerText =
-        storeIssueName;
+            {
 
-    r.cells[7].innerText =
-        newIssueQty;
+                line:
+                    line,
 
-    r.cells[8].innerText =
-        receivedQty;
+                po:
+                    newPO,
+
+                productionIncharge:
+                    productionIncharge,
+
+                storeIssueName:
+                    storeIssueName,
+
+                issueQty:
+                    newIssueQty,
+
+                receivedQty:
+                    receivedQty
+
+            }
+
+        );
 
 
-    let currentBalance =
-        receivedQty -
-        newIssueQty;
+        alert(
+            "Entry updated successfully"
+        );
+
+    }
+    catch(error){
+
+        console.error(error);
 
 
-    r.cells[9].innerText =
-        currentBalance;
-
-
-    r.classList.remove(
-        "low-stock"
-    );
-
-
-    if(currentBalance < 0){
-
-        r.classList.add(
-            "low-stock"
+        alert(
+            "Firebase Update Error:\n\n" +
+            error.message
         );
 
     }
 
-
-    document
-    .querySelectorAll(
-        "#materialTable tbody tr"
-    )
-    .forEach(function(row){
-
-        if(row === r){
-            return;
-        }
+};
 
 
-        let rowMaterial =
-            row.cells[0]
-            .innerText
-            .trim();
-
-
-        let rowPO =
-            row.cells[2]
-            .innerText
-            .trim();
-
-
-        if(
-            rowMaterial === oldMaterial &&
-            rowPO.toLowerCase() ===
-            newPO.toLowerCase()
-        ){
-
-            row.cells[7].innerText =
-                newIssueQty;
-
-
-            let rowReceived =
-                +parseFloat(
-                    row.cells[8]
-                    .innerText
-                ) || 0;
-
-
-            let rowBalance =
-                rowReceived -
-                newIssueQty;
-
-
-            row.cells[9].innerText =
-                rowBalance;
-
-
-            row.classList.remove(
-                "low-stock"
-            );
-
-
-            if(rowBalance < 0){
-
-                row.classList.add(
-                    "low-stock"
-                );
-
-            }
-
-        }
-
-    });
-
-
-    saveData();
-    updateSummary();
-
-
-    if(
-        document.getElementById(
-            "poSearchInput"
-        ).value.trim()
-    ){
-
-        searchPO();
-
-    }
-
-}
-
-
-/* =========================
+/* =================================================
 DELETE
-========================= */
+================================================= */
 
-function deleteRow(btn){
+window.deleteRow =
+async function(button){
 
-    let pass =
+    const password =
         prompt(
             "Enter Password"
         );
 
 
-    if(pass !== PASSWORD){
+    if(password !== PASSWORD){
 
         alert(
             "Wrong Password"
@@ -1650,41 +1909,60 @@ function deleteRow(btn){
     }
 
 
-    btn
-    .parentElement
-    .parentElement
-    .remove();
+    const row =
+        button
+        .parentElement
+        .parentElement;
 
 
-    saveData();
-    updateSummary();
+    const id =
+        row.dataset.id;
 
 
-    if(
-        document.getElementById(
-            "poSearchInput"
-        ).value.trim()
-    ){
+    try{
 
-        searchPO();
+        await deleteDoc(
+
+            doc(
+                db,
+                "materialTransactions",
+                id
+            )
+
+        );
+
+
+        alert(
+            "Entry deleted successfully"
+        );
+
+    }
+    catch(error){
+
+        console.error(error);
+
+
+        alert(
+            "Firebase Delete Error:\n\n" +
+            error.message
+        );
 
     }
 
-}
+};
 
 
-/* =========================
+/* =================================================
 SEARCH
-========================= */
+================================================= */
 
-function searchMaterial(){
+window.searchMaterial =
+function(){
 
-    let v =
-        document
-        .getElementById(
+    const value =
+        document.getElementById(
             "searchInput"
-        )
-        .value
+        ).value
         .toLowerCase();
 
 
@@ -1692,40 +1970,45 @@ function searchMaterial(){
     .querySelectorAll(
         "#materialTable tbody tr"
     )
-    .forEach(function(r){
+    .forEach(
+        function(row){
 
-        r.style.display =
-            r.innerText
-            .toLowerCase()
-            .includes(v)
-            ? ""
-            : "none";
+            row.style.display =
+                row.innerText
+                .toLowerCase()
+                .includes(value)
+                ? ""
+                : "none";
 
-    });
+        }
+    );
 
-}
+};
 
 
-/* =========================
+/* =================================================
 FILTER
-========================= */
+================================================= */
 
-function filterTable(mat,btn){
+window.filterTable =
+function(material,button){
 
     document
     .querySelectorAll(
         ".filter-btn"
     )
-    .forEach(function(b){
+    .forEach(
+        function(btn){
 
-        b.classList.remove(
-            "active"
-        );
+            btn.classList.remove(
+                "active"
+            );
 
-    });
+        }
+    );
 
 
-    btn.classList.add(
+    button.classList.add(
         "active"
     );
 
@@ -1734,182 +2017,115 @@ function filterTable(mat,btn){
     .querySelectorAll(
         "#materialTable tbody tr"
     )
-    .forEach(function(r){
+    .forEach(
+        function(row){
 
-        let name =
-            r.cells[0]
-            .innerText;
-
-
-        r.style.display =
-            (
-                mat === "all" ||
-                name === mat
-            )
-            ? ""
-            : "none";
-
-    });
-
-}
+            const name =
+                row.cells[0]
+                .innerText;
 
 
-/* =========================
-SAVE
-========================= */
-
-function saveData(){
-
-    localStorage.setItem(
-        "data",
-        document
-        .querySelector(
-            "#materialTable tbody"
-        )
-        .innerHTML
-    );
-
-}
-
-
-/* =========================
-LOAD
-========================= */
-
-function loadData(){
-
-    let d =
-        localStorage.getItem(
-            "data"
-        );
-
-
-    if(d){
-
-        document
-        .querySelector(
-            "#materialTable tbody"
-        )
-        .innerHTML = d;
-
-    }
-
-
-    document
-    .querySelectorAll(
-        "#materialTable tbody tr"
-    )
-    .forEach(function(r){
-
-        if(r.cells.length >= 10){
-
-            let balance =
-                +parseFloat(
-                    r.cells[9]
-                    .innerText
-                );
-
-
-            if(balance < 0){
-
-                r.classList.add(
-                    "low-stock"
-                );
-
-            }
+            row.style.display =
+                (
+                    material === "all" ||
+                    name === material
+                )
+                ? ""
+                : "none";
 
         }
+    );
 
-    });
-
-}
+};
 
 
-/* =========================
-MATERIAL WISE SUMMARY
-========================= */
+/* =================================================
+MATERIAL SUMMARY
+================================================= */
 
 function updateSummary(){
 
-    let matMap = {};
+    const map = {};
 
 
     document
     .querySelectorAll(
         "#materialTable tbody tr"
     )
-    .forEach(function(r){
+    .forEach(
+        function(row){
 
-        let mat =
-            r.cells[0]
-            .innerText
-            .trim();
-
-
-        let po =
-            r.cells[2]
-            .innerText
-            .trim();
-
-
-        let issue =
-            +parseFloat(
-                r.cells[7]
+            const material =
+                row.cells[0]
                 .innerText
-            ) || 0;
+                .trim();
 
 
-        let received =
-            +parseFloat(
-                r.cells[8]
+            const po =
+                row.cells[2]
                 .innerText
-            ) || 0;
+                .trim();
 
 
-        if(!matMap[mat]){
+            const issue =
+                Number(
+                    row.cells[7]
+                    .innerText
+                ) || 0;
 
-            matMap[mat] = {
 
-                issue:0,
+            const received =
+                Number(
+                    row.cells[8]
+                    .innerText
+                ) || 0;
 
-                received:0,
 
-                poList:{}
+            if(!map[material]){
 
-            };
+                map[material] = {
+
+                    issue:0,
+
+                    received:0,
+
+                    poList:{}
+
+                };
+
+            }
+
+
+            const poKey =
+                po.toLowerCase();
+
+
+            if(
+                !Object.prototype
+                .hasOwnProperty.call(
+                    map[material].poList,
+                    poKey
+                )
+            ){
+
+                map[material]
+                .poList[poKey] = true;
+
+
+                map[material]
+                .issue += issue;
+
+            }
+
+
+            map[material]
+            .received += received;
 
         }
+    );
 
 
-        let poKey =
-            po.toLowerCase();
-
-
-        if(
-            !Object.prototype
-            .hasOwnProperty.call(
-                matMap[mat].poList,
-                poKey
-            )
-        ){
-
-            matMap[mat]
-            .poList[poKey] = true;
-
-
-            matMap[mat]
-            .issue += issue;
-
-        }
-
-
-        matMap[mat]
-        .received += received;
-
-    });
-
-
-    let box =
+    const box =
         document.getElementById(
             "materialSummary"
         );
@@ -1918,11 +2134,13 @@ function updateSummary(){
     box.innerHTML = "";
 
 
-    for(let m in matMap){
+    for(
+        const material in map
+    ){
 
-        let balance =
-            matMap[m].received -
-            matMap[m].issue;
+        const balance =
+            map[material].received -
+            map[material].issue;
 
 
         box.innerHTML += `
@@ -1930,30 +2148,35 @@ function updateSummary(){
             <div class="summary-card">
 
                 <div class="summary-title">
-                    ${m}
+
+                    ${escapeHTML(material)}
+
                 </div>
+
 
                 <div class="summary-row">
 
                     Issue :
-                    ${matMap[m].issue}
-                    ${uom[m]}
+                    ${map[material].issue}
+                    ${uom[material]}
 
                 </div>
+
 
                 <div class="summary-row">
 
                     Received :
-                    ${matMap[m].received}
-                    ${uom[m]}
+                    ${map[material].received}
+                    ${uom[material]}
 
                 </div>
+
 
                 <div class="summary-balance">
 
                     Balance :
                     ${balance}
-                    ${uom[m]}
+                    ${uom[material]}
 
                 </div>
 
@@ -1967,46 +2190,45 @@ function updateSummary(){
 
 
 /* =================================================
-PO WISE MATERIAL SEARCH
+PO SEARCH
 ================================================= */
 
-function searchPO(){
+window.searchPO =
+function(){
 
-    let po =
-        document
-        .getElementById(
+    const po =
+        document.getElementById(
             "poSearchInput"
-        )
-        .value
+        ).value
         .trim()
         .toLowerCase();
 
 
-    let resultArea =
+    const resultArea =
         document.getElementById(
             "poResultArea"
         );
 
 
-    let resultBody =
+    const body =
         document.getElementById(
             "poSummaryBody"
         );
 
 
-    let resultTitle =
+    const title =
         document.getElementById(
             "poResultTitle"
         );
 
 
-    let resultTotal =
+    const total =
         document.getElementById(
             "poResultTotal"
         );
 
 
-    resultBody.innerHTML = "";
+    body.innerHTML = "";
 
 
     if(!po){
@@ -2019,166 +2241,163 @@ function searchPO(){
     }
 
 
-    let materialMap = {};
+    const map = {};
 
 
-    materials.forEach(function(material){
+    materials.forEach(
+        function(material){
 
-        materialMap[material] = {
+            map[material] = {
 
-            issue:0,
+                issue:0,
 
-            received:0
+                received:0
 
-        };
+            };
 
-    });
+        }
+    );
 
 
     document
     .querySelectorAll(
         "#materialTable tbody tr"
     )
-    .forEach(function(row){
+    .forEach(
+        function(row){
 
-        let rowPO =
-            row.cells[2]
-            .innerText
-            .trim()
-            .toLowerCase();
-
-
-        if(rowPO === po){
-
-            let material =
-                row.cells[0]
+            const rowPO =
+                row.cells[2]
                 .innerText
-                .trim();
+                .trim()
+                .toLowerCase();
 
 
-            let issue =
-                parseFloat(
-                    row.cells[7]
+            if(rowPO === po){
+
+                const material =
+                    row.cells[0]
                     .innerText
-                ) || 0;
+                    .trim();
 
 
-            let received =
-                parseFloat(
-                    row.cells[8]
-                    .innerText
-                ) || 0;
+                const issue =
+                    Number(
+                        row.cells[7]
+                        .innerText
+                    ) || 0;
 
 
-            if(
-                Object.prototype
-                .hasOwnProperty.call(
-                    materialMap,
-                    material
-                )
-            ){
+                const received =
+                    Number(
+                        row.cells[8]
+                        .innerText
+                    ) || 0;
 
-                if(
-                    materialMap[material]
-                    .issue === 0
-                ){
 
-                    materialMap[material]
-                    .issue = issue;
+                if(map[material]){
+
+                    if(
+                        map[material].issue === 0
+                    ){
+
+                        map[material].issue =
+                            issue;
+
+                    }
+
+
+                    map[material].received +=
+                        received;
 
                 }
-
-
-                materialMap[material]
-                .received += received;
 
             }
 
         }
-
-    });
+    );
 
 
     let totalIssue = 0;
+
     let totalReceived = 0;
-    let entryFound = false;
+
+    let found = false;
 
 
-    materials.forEach(function(material){
+    materials.forEach(
+        function(material){
 
-        let issue =
-            materialMap[material]
-            .issue;
-
-
-        let received =
-            materialMap[material]
-            .received;
+            const issue =
+                map[material].issue;
 
 
-        let balance =
-            received -
-            issue;
+            const received =
+                map[material].received;
 
 
-        if(
-            issue !== 0 ||
-            received !== 0
-        ){
+            const balance =
+                received - issue;
 
-            entryFound = true;
+
+            if(
+                issue !== 0 ||
+                received !== 0
+            ){
+
+                found = true;
+
+            }
+
+
+            totalIssue += issue;
+
+            totalReceived += received;
+
+
+            const row =
+                document.createElement(
+                    "tr"
+                );
+
+
+            const balanceClass =
+                balance < 0
+                ? "balance-negative"
+                : "balance-positive";
+
+
+            row.innerHTML = `
+
+                <td>
+                    ${escapeHTML(material)}
+                </td>
+
+                <td class="qty">
+                    ${issue}
+                    ${uom[material]}
+                </td>
+
+                <td class="qty">
+                    ${received}
+                    ${uom[material]}
+                </td>
+
+                <td class="${balanceClass}">
+                    ${balance}
+                    ${uom[material]}
+                </td>
+
+            `;
+
+
+            body.appendChild(row);
 
         }
+    );
 
 
-        totalIssue += issue;
-        totalReceived += received;
-
-
-        let row =
-            document.createElement(
-                "tr"
-            );
-
-
-        let balanceClass =
-            balance < 0
-            ? "balance-negative"
-            : "balance-positive";
-
-
-        row.innerHTML = `
-
-            <td>
-                ${material}
-            </td>
-
-            <td class="qty">
-                ${issue}
-                ${uom[material]}
-            </td>
-
-            <td class="qty">
-                ${received}
-                ${uom[material]}
-            </td>
-
-            <td class="${balanceClass}">
-                ${balance}
-                ${uom[material]}
-            </td>
-
-        `;
-
-
-        resultBody.appendChild(
-            row
-        );
-
-    });
-
-
-    resultTitle.innerText =
+    title.innerText =
         "PO : " +
         document
         .getElementById(
@@ -2188,10 +2407,10 @@ function searchPO(){
         .trim();
 
 
-    resultTotal.innerText =
+    total.innerText =
         "Total Issue: " +
         totalIssue +
-        "   |   Total Received: " +
+        " | Total Received: " +
         totalReceived;
 
 
@@ -2199,13 +2418,13 @@ function searchPO(){
         "block";
 
 
-    if(!entryFound){
+    if(!found){
 
-        resultTotal.innerText =
+        total.innerText =
             "No transaction found";
 
 
-        resultBody.innerHTML = `
+        body.innerHTML = `
 
             <tr>
 
@@ -2214,12 +2433,14 @@ function searchPO(){
                     class="po-no-result">
 
                     No material entry found for PO:
-                    ${document
-                    .getElementById(
-                        "poSearchInput"
-                    )
-                    .value
-                    .trim()}
+                    ${escapeHTML(
+                        document
+                        .getElementById(
+                            "poSearchInput"
+                        )
+                        .value
+                        .trim()
+                    )}
 
                 </td>
 
@@ -2229,104 +2450,102 @@ function searchPO(){
 
     }
 
-}
+};
 
 
-/* =========================
+/* =================================================
 CLEAR PO SEARCH
-========================= */
+================================================= */
 
-function clearPOSearch(){
+window.clearPOSearch =
+function(){
 
-    document
-    .getElementById(
+    document.getElementById(
         "poSearchInput"
-    )
-    .value = "";
+    ).value = "";
 
 
-    document
-    .getElementById(
+    document.getElementById(
         "poSummaryBody"
-    )
-    .innerHTML = "";
+    ).innerHTML = "";
 
 
-    document
-    .getElementById(
+    document.getElementById(
         "poResultTitle"
-    )
-    .innerText = "";
+    ).innerText = "";
 
 
-    document
-    .getElementById(
+    document.getElementById(
         "poResultTotal"
-    )
-    .innerText = "";
+    ).innerText = "";
 
 
-    document
-    .getElementById(
+    document.getElementById(
         "poResultArea"
-    )
-    .style.display =
+    ).style.display =
         "none";
 
-}
+};
 
 
-/* =========================
+/* =================================================
 EXPORT CSV
-========================= */
+================================================= */
 
-function exportCSV(){
+window.exportCSV =
+function(){
 
     let csv =
-        "Material,Line,PO,Production Incharge,Store Issue Name,UOM,Date,Issue,Received,Balance\n";
+        "Material,Line,PO,Production Incharge," +
+        "Store Issue Name,UOM,Date,Issue,Received,Balance\n";
 
 
     document
     .querySelectorAll(
         "#materialTable tr"
     )
-    .forEach(function(r){
+    .forEach(
+        function(row){
 
-        let arr = [];
-
-
-        r.querySelectorAll(
-            "td,th"
-        )
-        .forEach(function(c,i){
-
-            if(i !== 10){
-
-                let value =
-                    c.innerText
-                    .replace(
-                        /"/g,
-                        '""'
-                    );
+            const arr = [];
 
 
-                arr.push(
-                    `"${value}"`
-                );
+            row
+            .querySelectorAll(
+                "td,th"
+            )
+            .forEach(
+                function(cell,index){
 
-            }
+                    if(index !== 10){
 
-        });
-
-
-        csv +=
-            arr.join(",") +
-            "\n";
-
-    });
+                        const value =
+                            cell.innerText
+                            .replace(
+                                /"/g,
+                                '""'
+                            );
 
 
-    let blob =
+                        arr.push(
+                            `"${value}"`
+                        );
+
+                    }
+
+                }
+            );
+
+
+            csv +=
+                arr.join(",") +
+                "\n";
+
+        }
+    );
+
+
+    const blob =
         new Blob(
             [csv],
             {
@@ -2336,13 +2555,13 @@ function exportCSV(){
         );
 
 
-    let url =
+    const url =
         URL.createObjectURL(
             blob
         );
 
 
-    let a =
+    const a =
         document.createElement(
             "a"
         );
@@ -2352,25 +2571,21 @@ function exportCSV(){
 
 
     a.download =
-        "material_counting_report.csv";
+        "material_balance_report.csv";
 
 
-    document
-    .body
-    .appendChild(a);
+    document.body.appendChild(a);
 
 
     a.click();
 
 
-    document
-    .body
-    .removeChild(a);
+    document.body.removeChild(a);
 
 
     URL.revokeObjectURL(url);
 
-}
+};
 
 </script>
 
